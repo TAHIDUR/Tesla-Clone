@@ -6,7 +6,7 @@ function Header() {
     return (
         <Container>
             <a href="#">
-                <img src="/images/logo.svg"/>
+                <img alt="logo" src="/images/logo.svg"/>
             </a>
             <MenuGroup>
                 <div>Model S</div>
@@ -32,6 +32,10 @@ const Container = styled.div`
     align-items: center;
     min-height: 60px;
     padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 `
 
 const MenuGroup = styled.div`

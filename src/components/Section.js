@@ -1,20 +1,17 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 
-function Section() {
+function Section(props) {
+    console.log(props)
     return (
-        <Container>
+        <Container bgImage={props.bg_img}>
             <ItemText>
-                <h1>Model S</h1>
-                <p>Order Online for Touchless Delivery</p>
+                <h1>{ props.title }</h1>
+                <p>{ props.description }</p>
             </ItemText>
             <ButtonGroup>
-                <LeftButton>
-                    Custom Order
-                </LeftButton>
-                <RightButton>
-                    Existing Inventory
-                </RightButton>
+                <LeftButton>{ props.leftBtnText }</LeftButton>
+                <RightButton>{ props.rightBtnText }</RightButton>
             </ButtonGroup>
             <DownArrrow src="/images/down-arrow.svg" />     
         </Container>
@@ -27,7 +24,7 @@ const Container = styled.div`
     background-color: blue;
     height: 100vh;
     width: 100%;
-    background-image: url('/images/model-s.jpg');
+    background-image: ${props => `url('/images/${props.bgImage}')`} ;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -69,3 +66,4 @@ const DownArrrow = styled.img`
     animation: animateDown infinite 1.5s;
     margin-bottom: 20px;
 `
+// const bgImage = styled.img``

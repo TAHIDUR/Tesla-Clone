@@ -2,9 +2,8 @@ import React from 'react'
 import styled, { keyframes } from 'styled-components'
 
 function Section(props) {
-    console.log(props)
     return (
-        <Container bgImage={props.bg_img}>
+        <Container bgImage={props.bgImg}>
             <ItemText>
                 <h1>{ props.title }</h1>
                 <p>{ props.description }</p>
